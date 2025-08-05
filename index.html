@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rxmlo</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    function toggleLanguageMenu() {
+      const menu = document.getElementById('language-menu');
+      menu.classList.toggle('hidden');
+    }// Simüle edilmiş kullanıcı girişi kontrolü
+const isLoggedIn = false; // true yaparsan avatar gözükür
+window.onload = () => {
+  const loginArea = document.getElementById('login-area');
+  if (isLoggedIn) {
+    loginArea.innerHTML = '<img src="https://i.pravatar.cc/40" class="rounded-full" alt="Kullanıcı">';
+  } else {
+    loginArea.innerHTML = '<button class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-3 rounded">Giriş Yap</button>';
+  }
+}
+
+  </script>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <!-- Navbar -->
+  <header class="flex items-center justify-between p-4 bg-gray-800 shadow-md sticky top-0 z-50">
+    <div id="login-area"></div>
+    <nav class="space-x-6">
+      <a href="#" class="hover:text-blue-400">Ana Sayfa</a>
+      <a href="#" class="hover:text-blue-400">Komutlar</a>
+      <a href="#" class="hover:text-blue-400">Oy Ver</a>
+      <a href="#" class="hover:text-blue-400">Destek Sunucusu</a>
+    </nav>
+  </header>  <!-- Orta Logo -->  <section class="text-center py-16">
+    <img src="https://cdn.discordapp.com/avatars/1279071496983281758/62a673df94db689940a465437215a679.webp?size=4096" alt="Rxmlo Logo" class="mx-auto w-40 mb-4 animate-pulse">
+    <h1 class="text-4xl font-bold">Rxmlo</h1>
+  </section>  <!-- Sistem Kartları -->  <section class="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 py-10">
+    <!-- Hakkında -->
+    <div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+      <h2 class="text-2xl font-semibold mb-2">Rxmlo Gerçek Sahibi</h2>
+      <p>Rxmlo tamamen gerçek sahibi <a class="text-blue-400 underline" href="https://discord.com/users/1042822879634522133" target="_blank">WnersDev</a> (Enes Tekin). 1 sene boyunca Rxmlo tek sahibidir.</p>
+    </div><!-- Aşk Ölçer -->
+<div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+  <h2 class="text-xl font-bold mb-2">Aşk Ölçer</h2>
+  <img src="https://cdn.discordapp.com/attachments/1399918893522223215/1402264951959060542/Screenshot_2025-08-05-15-19-52-79_572064f74bd5f9fa804b05334aa4f912.jpg" class="rounded mt-2 mb-3">
+  <p>/aşk-ölçer komutunu kullanıp resimli şekilde aşk ölçer komutunu kullanabilirsiniz. (isteğe bağlı) [gizle] var, onu true yaparsanız sadece siz görürsünüz.</p>
+</div>
+
+<!-- Otomatik Karşılama -->
+<div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+  <h2 class="text-xl font-bold mb-2">Otomatik Karşılama</h2>
+  <img src="https://cdn.discordapp.com/attachments/1399918893522223215/1402265972613582939/Screenshot_2025-08-05-15-24-05-05_572064f74bd5f9fa804b05334aa4f912.jpg" class="rounded mt-2 mb-3">
+  <p>/giriş-çıkış resimli-ayarla komutunu kullanırsanız giriş çıkış resimli ayarlayabilirsiniz. Normal giriş çıkış için /giriş-çıkış ayarla kullanabilirsiniz.</p>
+</div>
+
+<!-- Giriş - Çıkış Resimleri -->
+<div class="bg-gray-800 p-6 rounded-xl shadow-lg">
+  <h2 class="text-xl font-bold mb-2">Giriş & Çıkış Resimleri</h2>
+  <p class="mb-2">Giriş Resmi:</p>
+  <img src="https://cdn.discordapp.com/attachments/1295093491864571965/1402266692066869298/Screenshot_2025-08-05-15-26-41-90_572064f74bd5f9fa804b05334aa4f912.jpg" class="rounded mb-3">
+  <p class="mb-2">Çıkış Resmi:</p>
+  <img src="https://cdn.discordapp.com/attachments/1295080848508452874/1402267282830393365/Screenshot_2025-08-05-15-29-18-38_572064f74bd5f9fa804b05334aa4f912.jpg" class="rounded">
+</div>
+
+  </section>  <!-- Dil Seçici -->  <footer class="p-4 bg-gray-800 text-center relative">
+    <button onclick="toggleLanguageMenu()" class="bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">Dil</button>
+    <div id="language-menu" class="absolute right-4 mt-2 bg-gray-700 rounded shadow-lg hidden">
+      <ul>
+        <li class="px-4 py-2 hover:bg-gray-600 cursor-pointer">Türkçe</li>
+      </ul>
+    </div>
+    <p class="mt-4 text-sm text-gray-400">© 2025 Rxmlo. Tüm hakları saklıdır.</p>
+  </footer>
+</body>
+</html>
